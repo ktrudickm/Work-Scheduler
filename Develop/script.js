@@ -2,6 +2,8 @@
 var currentDate = moment();
 $("#currentDay").text(currentDate.format("dddd, MMM Do"));
 
+var saveBtnEl = $(".saveBtn");
+var descriptionEl = $(".description");
 
 var nineEl = $("#hournine");
 var tenEl = $("#hourten");
@@ -31,4 +33,23 @@ for (i=0; i < hoursNumber.length; i++) {
         hours[i].css("background-color", "green");
     }
 };
+
+function displayText(){
+    nineEl.innerHTML = localStorage.getItem("hournine");
+}
+
+
+
+// saveBtn click listener 
+saveBtnEl.on("click", function(event) {
+    event.preventDefault();
+    var btnClicked = $(event.target);
+    var textInput = btnClicked.siblings(".description").val();
+    var timeSlot = btnClicked.siblings().attr('id');
+
+
+    console.log(textInput);
+    localStorage.setItem(timeSlot,textInput);
+    displayText();
+});
 
