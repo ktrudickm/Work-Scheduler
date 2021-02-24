@@ -34,22 +34,45 @@ for (i=0; i < hoursNumber.length; i++) {
     }
 };
 
-function displayText(){
-    nineEl.innerHTML = localStorage.getItem("hournine");
-}
+// function displayText(){
+//     nineEl.innerHTML = localStorage.getItem("hournine");
+// }
 
-
-
-// saveBtn click listener 
-saveBtnEl.on("click", function(event) {
+function saveInput (event) {
     event.preventDefault();
-    var btnClicked = $(event.target);
-    var textInput = btnClicked.siblings(".description").val();
-    var timeSlot = btnClicked.siblings().attr('id');
+ 
+    // var btnClicked = $(event.target);
+    console.log($(this).siblings(".description").attr("id"));
+    var textInput = $(this).siblings(".description").val();
+    var timeSlot = $(this).siblings(".description").attr("id");
 
 
     console.log(textInput);
     localStorage.setItem(timeSlot,textInput);
-    displayText();
-});
+}
 
+// // saveBtn click listener 
+// saveBtnEl.on("click", function(event) {
+//     event.preventDefault();
+//     var btnClicked = $(event.target);
+//     var textInput = btnClicked.siblings(".description").val();
+//     var timeSlot = btnClicked.siblings().attr('id');
+
+
+//     console.log(textInput);
+//     localStorage.setItem(timeSlot,textInput);
+//     displayText();
+// });
+
+
+for (let i = 0; i < hours.length; i++) {
+   var key = hours[i].attr('id')
+
+   hours[i].val(localStorage.getItem(key))
+    
+}
+
+
+
+
+saveBtnEl.on('click', saveInput);
