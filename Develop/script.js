@@ -34,14 +34,11 @@ for (i=0; i < hoursNumber.length; i++) {
     }
 };
 
-// function displayText(){
-//     nineEl.innerHTML = localStorage.getItem("hournine");
-// }
 
+// Function to save the user text inputs in the time slot text fields into local storage
 function saveInput (event) {
     event.preventDefault();
  
-    // var btnClicked = $(event.target);
     console.log($(this).siblings(".description").attr("id"));
     var textInput = $(this).siblings(".description").val();
     var timeSlot = $(this).siblings(".description").attr("id");
@@ -51,20 +48,7 @@ function saveInput (event) {
     localStorage.setItem(timeSlot,textInput);
 }
 
-// // saveBtn click listener 
-// saveBtnEl.on("click", function(event) {
-//     event.preventDefault();
-//     var btnClicked = $(event.target);
-//     var textInput = btnClicked.siblings(".description").val();
-//     var timeSlot = btnClicked.siblings().attr('id');
-
-
-//     console.log(textInput);
-//     localStorage.setItem(timeSlot,textInput);
-//     displayText();
-// });
-
-
+// For loop to display user text input at each timeslot using items stored in local storage.
 for (let i = 0; i < hours.length; i++) {
    var key = hours[i].attr('id')
 
@@ -73,6 +57,5 @@ for (let i = 0; i < hours.length; i++) {
 }
 
 
-
-
+// Event listener for when the save button is clicked.
 saveBtnEl.on('click', saveInput);
