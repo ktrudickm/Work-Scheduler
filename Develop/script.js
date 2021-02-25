@@ -22,15 +22,15 @@ var hoursNumber = [9,10,11,12,13,14,15,16,17];
 // Loop through the hoursNumber array to compare to actual hour of the day to adjust background colors on calender.
 for (i=0; i < hoursNumber.length; i++) {
     if (hoursNumber[i] === hourofDay){
-        hours[i].css("background-color", "red");
+        hours[i].addClass("present");
     }
 
     else if (hoursNumber[i] < hourofDay) {
-        hours[i].css("background-color", "gray");
+        hours[i].addClass("past");
     }
 
     else {
-        hours[i].css("background-color", "green");
+        hours[i].addClass("future");
     }
 };
 
