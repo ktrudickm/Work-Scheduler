@@ -15,6 +15,7 @@ var threeEl = $("#hourthree");
 var fourEl = $("#hourfour");
 var fiveEl = $("#hourfive");
 
+// Create variables to be used for determining background color of each time slot text entry field
 var hourofDay = new Date().getHours();
 var hours = [nineEl, tenEl, elevenEl, noonEl, oneEl, twoEl, threeEl, fourEl, fiveEl];
 var hoursNumber = [9,10,11,12,13,14,15,16,17];
