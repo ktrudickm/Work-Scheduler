@@ -69,7 +69,18 @@ So now we have the inputs saved to local storage, but in order to prevent these 
 
 
 ## Credits
+
 Moment JS - [Moment Display](https://momentjs.com/docs/#/displaying/)
+
+Bootstrap - [Containers](https://getbootstrap.com/docs/5.0/layout/containers/)
+
+Bootstrap - [Forms](https://getbootstrap.com/docs/5.0/forms/overview/)
+
+W3Schools - [Storage getItem Method](https://www.w3schools.com/jsref/met_storage_getitem.asp)
+
+MDN Web Docs - [Window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+
+MDN Web Docs - [Storage.setItem](https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem)
 
 ## Links
 
